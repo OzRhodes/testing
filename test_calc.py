@@ -35,7 +35,9 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.divide(5,10),0.5)    
         self.assertEqual(calc.divide(-1,-1),1)
         self.assertEqual(calc.divide(1,-1),-1)
-
+        
+        with self.assertRaises(ValueError):
+            calc.divide (10,0)
 
 if __name__ == "__main__":
     unittest.main()
