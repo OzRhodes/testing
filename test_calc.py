@@ -30,10 +30,12 @@ class TestCalc(unittest.TestCase):
 
     def test_divide(self):
         result = calc.divide(5,10)
+        # catchesa floor div issue
         self.assertEqual(result,0.5)
-        self.assertEqual(calc.divide(5,10),1.5)    
+        self.assertEqual(calc.divide(5,10),0.5)    
         self.assertEqual(calc.divide(-1,-1),1)
         self.assertEqual(calc.divide(1,-1),-1)
+
 
 if __name__ == "__main__":
     unittest.main()
